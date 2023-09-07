@@ -7,8 +7,7 @@ body {
 }
 
 main {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
 }
 
 .thumbnail {
@@ -18,12 +17,14 @@ main {
 
 @media (max-width: 960px) and (min-width: 640px) {
     main {
-        width: 500px;
+        grid-template-columns: 220px 220px;
+        grid-template-rows: 320px 320px 320px;
     }
 }
 
 @media (min-width: 961px) {
     main {
-        width: 700px;
+        grid-template-columns: repeat(3, 220px);
+        grid-template-rows: repeat(2, 320px);
     }
 }
